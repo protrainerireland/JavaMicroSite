@@ -15,6 +15,10 @@ module.exports = function(config) {
         return JSON.stringify(item);
     });
 
+    config.addFilter("makebold", function(item){
+        return `<b>${item}</b>`;
+    })
+
     config.addPassthroughCopy({"./src/img/*.*": "img"});
     
     config.addPassthroughCopy({"./src/img/testimonials/*.*": "img/testimonials"});
