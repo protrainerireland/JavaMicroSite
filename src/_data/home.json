@@ -16,46 +16,29 @@
             "image": "svg/onlineclass.svg"
         }, 
         {
-            "id": "services", 
-            "link": "/#services", 
-            "text": "Services", 
-            "title": "Services", 
+            "id": "topics", 
+            "link": "/#topics", 
+            "text": "Topics", 
+            "title": "Topics", 
             "type": "grid", 
             "items":[
                 {
-                    "title": "Landing Page Development", 
-                    "text": "lorem ipsum", 
+                    "title": "Java Development", 
+                    "text": "We run Java training courses for all skill levels", 
                     "image": "/svg/Design collaboration.svg", 
                     "link": "" 
                 }, 
                 {
-                    "title": "Online Branding", 
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
+                    "title": "Spring Framework", 
+                    "text": "We have extensive selection of courses on all aspects of the Spring Framework.", 
                     "image": "/svg/branding.svg", 
                     "link": ""
                 }, 
                 {
-                    "title": "Google Ads", 
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
+                    "title": "Enterprise Java Beans", 
+                    "text": "Enterprise Development Training on Enterprise Java Beans (EJB)", 
                     "image": "/svg/ads.svg", 
                     "link": ""
-                }, 
-                {
-                    "title": "PPC", 
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    "image": "/svg/undraw_Savings_dwkw.svg", 
-                    "link": ""
-                }, 
-                {
-                    "title": "Social Media",
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
-                    "image": "/svg/Social dilemma.svg", 
-                    "link": ""
-                }, 
-                {
-                    "title": "SEO", 
-                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
-                    "image": "/svg/Code Version Control.svg"
                 }
             ] 
         }, 
@@ -66,14 +49,13 @@
             "title": "About", 
             "type": "listwithimage", 
             "content":{
-                "title": "Odio sed id eos et laboriosam consequatur eos earum soluta.", 
+                "title": "JavaTraining.ie in conjunction with Professional Training", 
                 "list":[
-                    "Sint aliquam consequatur ex ex labore.", 
-                    "Duis aute irure dolor in reprehenderit in voluptate velit.", 
-                    "Aspernatur consectetur omnis numquam quaerat.", 
-                    "Et vel ut quidem alias veritatis repudiandae ut fugit.", 
-                    "Fugit ut maxime incidunt accusantium totam repellendus eum error.", 
-                    "Ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    "Practical hands-on Java Training courses", 
+                    "Delivered Online", 
+                    "In-person classrooms in Cork and Dublin", 
+                    "On-site in your own office", 
+                    "Expert trainers with industry experience"
                 ], 
                 "image": "svg/undraw_mobile_marketing_iqbr.svg"
             }
