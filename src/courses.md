@@ -17,7 +17,7 @@ tags: [main]
 <tbody>
 </tbody>
 
-{% for course in courseapi.courses %}
+{% for course in coursesapifull.courses %}
 <tr>
 <td><a href="/courses/{{ course.name | slug }}/">{{ course.id }}</a></td>
 <td>{{ course.name }}</td>

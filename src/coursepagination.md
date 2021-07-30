@@ -1,10 +1,9 @@
 ---
-layoutsss: course_layout
-paginations:
-    data: courseapi.courses
+layout: course_layout
+pagination:
+    data: coursesapifull.courses
     size: 1
     alias: course
-permalinksss: "courses/{{ course.name | slug }}/"
-permalink: testpage.html
+permalink: "courses/{{ course.name | slug }}/"
 ---
 {{ courseapi | json }}
