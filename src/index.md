@@ -1,5 +1,4 @@
 ---
 layout: homepage_layout
-title: JavaScript Training Courses | Dublin Cork Limerick Ireland
+title: Javascript Training Courses | Dublin Cork Limerick Ireland
 ---
-  
