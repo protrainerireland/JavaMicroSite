@@ -1,8 +1,8 @@
 {
-    "primary_color": "#E63946", 
-    "secondary_color": "#FFFAFF",
+    "primary_color": "#A8D0DB", 
+    "secondary_color": "#3074B9",
     "foreground_color": "#000000", 
-    "secondary_foreground_color": "#457B9D",
+    "secondary_foreground_color": "#CA3132",
     "neutral": "#FFFAEE",
 
     "gradient_start": "#F5D547",
