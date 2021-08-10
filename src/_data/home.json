@@ -69,16 +69,14 @@
                 "title": "Testimonials", 
                 "quotes":[
                     {
-                        "name": "Carol", 
-                        "jobtitle": "CEO at DIN", 
-                        "image": "/img/testimonials/carol.JPEG", 
-                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+                        "name": "Java Programmer",  
+                        "image": "/img/testimonials/man.png", 
+                        "text": "Our trainer used clear and concise examples. Particularly good demonstration on the use of the debugger and exception handling. He explained and demonstrated SQL injection attacks with examples and how to use prepared statements to defend against SQL injection attacks.  I really enjoyed the practical nature of the course."
                     }, 
                     {
-                        "name": "Fred", 
-                        "jobtitle": "Co-founder at ArtSpace", 
-                        "image": "/img/testimonials/fred.JPEG", 
-                        "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                        "name": "Learning & Development Manager",  
+                        "image": "/img/testimonials/woman.png", 
+                        "text": "Our participants noted that there were lots of coding examples used and the trainer explained examples well and paused where participants had issues.  We really got through a lot in a week.  We will definitely be booking further programmes for our graduate programmes."
                     }
                 ]
             }

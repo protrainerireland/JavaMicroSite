@@ -20,9 +20,6 @@ module.exports = {
                             <div class="col-md-6">
                             <p class="promo-title">${ section.title }</p>
                             <p class="join-title">${ section.subtitle }</p>
-                            <a href="#" class="link-play">
-                                <img src="svg/play.svg" alt="" class="play-btn">Watch Tutorials
-                            </a>
                             </div>
                             <div class="col-md-6">
                                 <img src="${ section.image }" alt="" class="img-fluid">
@@ -77,7 +74,7 @@ module.exports = {
                 let quotes = section.content.quotes.map(quote => `<div class="col-md-5 testimonials">
                     <p class="feedback">"${quote.text}"</p>
                     <img src="${quote.image}"  alt="">
-                    <p class="user-details"><b>${quote.name}</b><br>${ quote.jobtitle }</p>
+                    <p class="user-details"><b>${quote.name}</b></p>
                     </div>`).join("");
 
                 html = `<section id="${ section.id }" class="section">
