@@ -19,6 +19,11 @@ module.exports = function(config) {
         return `<b>${item}</b>`;
     })
 
+    // this filter is to fix the problem with the Azure and other MS courses where there is a : in the name
+    config.addFilter("removeInvalidChars", function(filename) {
+        return filename.replace(/:/ig, "-");
+    });
+
     config.addPassthroughCopy({"./src/img/*.*": "img"});
     
     config.addPassthroughCopy({"./src/img/testimonials/*.*": "img/testimonials"});

@@ -5,7 +5,7 @@ tags: [main]
 ---
 
 <hr class="my-2">
-<h1>{{ site.organisation.keyword }} Courses</h1>
+<h1>{{ site.organisation.searchKeywords }} Courses</h1>
 
 <table class="table">
 <thead>

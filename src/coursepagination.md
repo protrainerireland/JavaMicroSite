@@ -4,6 +4,6 @@ pagination:
     data: coursesapifull.courses
     size: 1
     alias: course
-permalink: "courses/{{ course.name | slug }}/"
+permalink: "courses/{{ course.name | slug | removeInvalidChars}}/"
 ---
 {{ courseapi | json }}

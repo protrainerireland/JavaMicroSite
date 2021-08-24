@@ -7,9 +7,6 @@ const fs = require('fs');
 //const site = JSON.parse(json);
 
 module.exports = async function() {
-  console.log( "***Fetching courses" );
-
-  console.log(__dirname);
 
   let rawData = fs.readFileSync(`${__dirname}/site.json`);
   let site = JSON.parse(rawData);
@@ -24,21 +21,57 @@ module.exports = async function() {
   });
 
 
-  console.log(json);
+    // map the results from the courses full api 
+    // need to remove duplicates
 
-  // map the results from the courses full api 
+  // the courses api returns an array
 
-  let courseList = [];
+  let data = [
+    {
+      keyword:"java",
+      title: "Java", 
+      landingpagetext: "", 
+      paragraphs: [], 
+      courses:[
+        {
+          name: "Java Course 1", 
+          id: 5001
+        }, 
+        {
+          name: "Java Course 2", 
+          id: 5002
+        }
+      
+      ]
+    }, 
+    {
+      keyword:"ejb", 
+      title:"Ejb", 
+      paragraphs: [], 
+      courses:[
+        {
+          name: "EJB Course 1", 
+          id: 6001
+        }, 
+        {
+          name: "Java Course 1", 
+          id: 5001
+        }, 
+        {
+          name: "EJB Course 2", 
+          id: 6002
+        }
+      ]
+    }
+  ];
 
-  for (let i=0; i<json.length; i++) {
 
-    json[i].courses.forEach(course=>courseList.push(course));
-  }
-
+  distinctCourseList = json.flatMap(keyword => keyword.courses)
+                           .filter((course, index, courses) => courses.findIndex(c=>c.id==course.id) == index);
 
   
   return {
-    courses: courseList
+    courses: distinctCourseList
   };
 
   // GitHub API: https://developer.github.com/v3/repos/#get

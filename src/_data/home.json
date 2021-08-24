@@ -47,7 +47,19 @@
                     "link": ""
                 }
             ] 
-        }, 
+        },
+        {
+            "id": "keywordtext",
+            "link": "/#text", 
+            "text": "Info", 
+            "title": "Info", 
+            "type": "keywordtext",
+            "image": "/svg/Code Version Control.svg", 
+            "imagePosition": "right",
+            "content":{
+                "title": "hello"
+            }
+        },
         {
             "id": "about",
             "link": "/#about", 

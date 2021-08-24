@@ -1,9 +1,7 @@
 {
-    "searchKeywords": ["java"],
+    "searchKeywords": ["java", "ejb", "spring"],
     "organisation": {
-        "name": "JavaTraining.ie",
-        "keyword": "Java"
-
+        "name": "JavaTraining.ie"
     },
     "url": "javatraining.ie",
     "logo": "/img/javalogo.png",
@@ -23,10 +21,19 @@
         "country": "Ireland", 
         "postcode": "D02 W102"
     },
+    "addressLimerick": {
+        "line1": "Limerick Business Complex",
+        "line2": "Raheen Business Park",
+        "town": "",
+        "county": "Limerick",
+        "country": "Ireland",
+        "postcode": "V94 CP26"
+    },
     
     "email": "info@professional.ie", 
     "phone": "+353 1 6627700",
-    "phoneDublin": "+353 21 4319010", 
+    "phoneDublin": "+353 21 4319010",
+    "phoneLimerick": "061311982", 
     "location": {
         "lat": 51.852587, 
         "lng": -8.484224, 
@@ -37,7 +44,7 @@
         "Full range of java courses available"
     ], 
     "designer": {
-        "name": "Professional Consulting Ltd.",
+        "name": "professional.ie",
         "link": "https://professional.ie/consulting_ireland/web%20development%20consultancy%20ireland.htm"
     }, 
     "social": {
