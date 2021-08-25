@@ -38,38 +38,11 @@ module.exports = {
                         <img src="${ section.background }" class="bottom-img" alt="">
                     </section>`;
                 break;
-            case "grid":
-                html = `<section id="${section.id}" class="section">
-                            <div class="container text-center">
-                            <h3 class="title text-center">${ section.title }</h3>
-                            <div class="row text-center">
-                            `;
-                section.items.forEach(item=>{
-                    html += `<div class="col-md-4 services">
-                                <img src="${ item.image }" class="service-img"   alt="">
-                                <h4>${ item.title }</h4>
-                                <p>${ item.text }</p>
-                            </div>`;
-
-                });
-
-                html += `</div>
-                        </div>
-                    </section>`;
-                break;
+            
             case "keywordtext":
 
-
-                //let defaultTemplate = `<div>${site.searchKeywords.join(" ")}</div>`;
                 let defaultTemplate = `${site.searchKeywords[0]} is one of the most popular coding languages in the world. The job market for ${ site.searchKeywords[0] } developers is robust and consistent, making it a great programming language to learn. Our courses can give you the skills you need to work effectively with ${ site.searchKeywords[0] }.  Why attend one of our ${ site.searchKeywords[0] } courses? If you're interested working effectively with ${ site.searchKeywords[0] } to benefit your organisation and to get an edge over your competitors, or simply to learn a highly lucrative skill then you should consider our ${ site.searchKeywords[0] } training course.</p>`
                 
-                if (section.image) {
-                    //..tbd
-                }
-
-                if (section.left) {
-                    // tbd
-                }
                 html = `<section id="${section.id}" class="section">
                     <div class="container">
                     <h3 class="title text-center">${ section.title }</h3>
@@ -89,6 +62,49 @@ module.exports = {
                 </section>`;
                 break;
 
+            case "about":
+                
+                html = `<section id="${section.id}" class="section">
+                    <div class="container">
+                    <h3 class="title text-center">${ section.title }</h3>
+                    <div class="row ${section.imagePosition=="left" ? "flex-row-reverse" :""}">
+                        <div class="${section.image ? 'col-md-6' : 'col-md-12'} about">
+                        <p class="about-title">${ section.content.title }</p>
+                        <p>${ section.content.textFirst }</p>
+                        <p>${ section.content.textSecond }</p>
+                        <p>${ section.content.textThird }</p>
+                        </div>`;
+                    if (section.image) {
+                        html += `<div class="col-md-6">
+                                    <img src="${ section.image }" class="img-fluid" alt="">
+                                </div>`;
+                    }    
+
+                html += `</div>
+                    </div>
+                </section>`;
+                break;
+
+            case "welcome":
+                
+                html = `<section id="${section.id}" class="section">
+                    <div class="container">
+                    <h3 class="title text-center">${ section.title }</h3>
+                    <div class="row ${section.imagePosition=="left" ? "flex-row-reverse" :""}">
+                        <div class="${section.image ? 'col-md-6' : 'col-md-12'} about">
+                        <p class="about-title">${ section.content.title }</p>
+                        <p>${ section.content.text }</p>
+                        </div>`;
+                    if (section.image) {
+                        html += `<div class="col-md-6">
+                                    <img src="${ section.image }" class="img-fluid" alt="">
+                                </div>`;
+                    }    
+
+                html += `</div>
+                    </div>
+                </section>`;
+                break;
 
             case "listwithimage":
                 //let list = "<ul>";

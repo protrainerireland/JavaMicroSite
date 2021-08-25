@@ -11,53 +11,21 @@
             "link": "no", 
             "type": "banner", 
             "title": "Java Training Courses Ireland", 
-            "subtitle": "Contact Us for all your Java training requirements", 
+            "subtitle": "Contact us for all your Java training requirements", 
             "background": "img/ground@-min.png",
             "image": "svg/onlineclass.svg"
         }, 
         {
-            "id": "topics", 
-            "link": "/#topics", 
-            "text": "Topics", 
-            "title": "Topics", 
-            "type": "grid", 
-            "items":[
-                {
-                    "title": "", 
-                    "text": "We run Java training courses for all skill levels. Our courses can give you the skills you need to work effectively with Java.", 
-                    "image": "/svg/Design collaboration.svg", 
-                    "link": "" 
-                },
-                {
-                    "title": "", 
-                    "text": "Java is fast, stable, and highly scalable, making it the most popular coding language in the world. The job market for Java developers is therefore robust and consistent, making it a great programming language to learn.", 
-                    "image": "/svg/undraw_programming_2svr.svg", 
-                    "link": "" 
-                }, 
-                {
-                    "title": "", 
-                    "text": "We have an extensive selection of courses on all aspects of the Spring Framework.", 
-                    "image": "/svg/undraw_software_engineer_lvl5.svg", 
-                    "link": ""
-                }, 
-                {
-                    "title": "", 
-                    "text": "", 
-                    "image": "", 
-                    "link": ""
-                }
-            ] 
-        },
-        {
-            "id": "keywordtext",
-            "link": "/#text", 
-            "text": "Info", 
-            "title": "Info", 
-            "type": "keywordtext",
+            "id": "welcome",
+            "link": "/#welcome", 
+            "text": "Welcome", 
+            "title": "Welcome", 
+            "type": "welcome",
             "image": "/svg/Code Version Control.svg", 
             "imagePosition": "right",
             "content":{
-                "title": "hello"
+                "title": "A great programming language to learn...",
+                "text": "Java is fast, stable, and highly scalable, making it the most popular coding language in the world. The job market for Java developers is therefore robust and consistent, making it a great programming language to learn."
             }
         },
         {
@@ -65,17 +33,27 @@
             "link": "/#about", 
             "text": "About", 
             "title": "About", 
-            "type": "listwithimage", 
+            "type": "about",
+            "image": "/svg/Design collaboration.svg", 
+            "imagePosition": "right",
             "content":{
-                "title": "JavaTraining.ie in conjunction with Professional Training", 
-                "list":[
-                    "Practical hands-on Java Training courses", 
-                    "Delivered Online", 
-                    "In-person classrooms in Cork and Dublin", 
-                    "On-site in your own office", 
-                    "Expert trainers with industry experience"
-                ], 
-                "image": "svg/undraw_mobile_marketing_iqbr.svg"
+                "title": "Java is everywhere...",
+                "textFirst": "Java is everywhere – desktop, mobile and card.  Java is an Object-Oriented Programming Language which is easy to learn with our focused courses.  It has a Rich API and powerful development tools e.g., Eclipse, Netbeans etc.  Coding in IDE is a pleasure, especially if you have coded in DOS Editor or Notepad.",
+                "textSecond": "Open-source libraries ensure that Java should be used everywhere. Apache, Google, and other organization have contributed a lot of great libraries, which makes Java development easy, faster, and cost-effective.",
+                "textThird": "Frameworks like Spring, Struts, Maven ensure that Java development follows best practices of software craftsmanship, promotes the use of design patterns and assists Java developers in getting their job done."
+            }
+        },
+        
+        {
+            "id": "keywordtext",
+            "link": "/#text", 
+            "text": "Why Attend?", 
+            "title": "Why Attend?", 
+            "type": "keywordtext",
+            "image": "", 
+            "imagePosition": "right",
+            "content":{
+                "title": "Why attend one of our Java courses?"
             }
         }, 
         {
