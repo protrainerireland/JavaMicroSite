@@ -1,0 +1,54 @@
+{
+    "id": "pricing", 
+    "link": "/#pricing", 
+    "type": "pricing", 
+    "text": "Pricing",
+    "content": {
+        "prices":[
+            {
+                "title": "Free", 
+                "cost": "$0",
+                "costPeriod": "/ mo",
+                "lines":[
+                    "10 users included", 
+                    "2 GB of storage", 
+                    "Email support", 
+                    "Help center access"
+                ], 
+                "ctaText": "Sign up for free", 
+                "ctaAction": "/signup?plan=free", 
+                "highlighted": false
+
+            }, 
+            {
+                "title": "Professional", 
+                "cost": "$15",
+                "costPeriod": "/ mo",
+                "lines":[
+                    "20 users included", 
+                    "10 GB of storage", 
+                    "Priority email support", 
+                    "Help center access"
+                ], 
+                "ctaText": "Sign up now", 
+                "ctaAction": "/signup?plan=professional",
+                "highlighted": true
+            }, 
+            {
+                "title": "Enterprise", 
+                "cost": "€29",
+                "costPeriod": "/ mo",
+                "lines":[
+                    "30 users included", 
+                    "15 GB of storage", 
+                    "Phone and email support", 
+                    "Help center access"
+                ], 
+                "ctaText": "Contact Us", 
+                "ctaAction": "/signup?plan=enterprise",
+                "highlighted": false
+            }                                        
+        ]
+    }
+
+}
