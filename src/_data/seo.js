@@ -8,8 +8,7 @@ module.exports = async function() {
 
     return {
         footertext:[
-            `We provide ${site.searchKeywords.join(" and ")} training`, 
-            `Contact us for all your ${site.searchKeywords.join(" and ")} training`
+            `We provide expert focused ${site.searchKeywords.join(" and ")} training. For the skills you need, view our courses and contact us.`
         ]    
     }
 

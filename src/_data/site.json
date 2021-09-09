@@ -6,7 +6,7 @@
     "url": "javatraining.ie",
     "logo": "/img/javalogo.png",
     "address": {
-        "line1": "Building 6500", 
+        "line1": "Building 6500E", 
         "line2": "Cork Airport Business Park", 
         "town": "Kinsale Road", 
         "county": "Cork", 
@@ -14,7 +14,7 @@
         "postcode": "T12 TP8H"
     },
     "addressDublin": {
-        "line1": "Unit 22", 
+        "line1": "Unit 22/23", 
         "line2": "Westland", 
         "town": "Pearse Street", 
         "county": "Dublin 2", 
@@ -33,7 +33,7 @@
     "email": "info@professional.ie", 
     "phone": "+353 1 6627700",
     "phoneDublin": "+353 21 4319010",
-    "phoneLimerick": "061311982", 
+    "phoneLimerick": "+353 06 1311982", 
     "location": {
         "lat": 51.852587, 
         "lng": -8.484224, 
@@ -52,5 +52,9 @@
         "instagram": "#", 
         "twitter": "#", 
         "linkedin": "#"
+    }, 
+    "animation": {
+        "delay": 300, 
+        "defaultOffset": 350
     }
 }

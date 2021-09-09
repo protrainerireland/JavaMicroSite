@@ -10,29 +10,18 @@
         </div>
         <div class="col-md-4 footer-box">
             <p id="contact"><b>OUR OFFICES</b></p>
-            <p><i class="fa fa-map-marker"></i>{{ site.address.line1 }} {{ site.address.line2 }} {{ site.address.town }} {{ site.address.county }} {{ site.address.country }}</p>
-            <p><i class="fa fa-map-marker"></i>{{ site.addressDublin.line1 }} {{ site.addressDublin.line2 }} {{ site.addressDublin.town }} {{ site.addressDublin.county }} {{ site.addressDublin.country }}</p>
-            <p><i class="fa fa-phone"></i>{{ site.phone }}</p>
-            <p><i class="fa fa-phone"></i>{{ site.phoneDublin }}</p>
-            <p><i class="fa fa-envelope-o"></i>{{ site.email }}</p>
 
-            
-            
+            <p><i class="fa fa-map-marker"></i>{{ site.address.line1 }}, {{ site.address.line2 }}, {{ site.address.town }}, {{ site.address.county }}, {{ site.address.country }}</p>
+            <p><i class="fa fa-map-marker"></i>{{ site.addressDublin.line1 }}, {{ site.addressDublin.line2 }}, {{ site.addressDublin.town }}, {{ site.addressDublin.county }}, {{ site.addressDublin.country }}</p>
+            <p><i class="fa fa-map-marker"></i>{{ site.addressLimerick.line1 }}, {{ site.addressLimerick.line2 }}, {{ site.addressLimerick.county }}, {{ site.addressLimerick.country }}</p>
         </div>
         <div class="col-md-4 footer-box">
-            <p><b>SUBSCRIBE NEWSLETTER</b></p>
-            <input type="email"class="form-control" placeholder="Your Email">
-            <button type="button"class="btn btn-primary" name="button">Subscribe</button>
-
-            <!-- <div id="social">
-                <p>Find Us On Social Media</p>
-                    <div class="social-icons">
-                      <a href="#" class="svg-icons"><i class="fa fa-facebook"></i></a>
-                      <a href="#" class="svg-icons"><i class="fa fa-instagram"></i></a>
-                      <a href="#" class="svg-icons"><i class="fa fa-twitter"></i></a>
-                      <a href="#" class="svg-icons"><i class="fa fa-linkedin"></i></a>
-                    </div>
-            </div> -->
+          <p id="contact"><b>CONTACT US</b></p>
+          
+          <p><i class="fa fa-phone"></i>{{ site.phone }} (Cork)</p>
+          <p><i class="fa fa-phone"></i>{{ site.phoneDublin }} (Dublin)</p>
+          <p><i class="fa fa-phone"></i>{{ site.phoneLimerick }} (Limerick)</p>
+          <p><i class="fa fa-envelope-o"></i>{{ site.email }}</p> 
         </div>
         <div class="col-md-6 ">
           <p class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script>. All rights reserved | Designed by <a href="{{ site.designer.link }}">{{ site.designer.name }}</a></p>
