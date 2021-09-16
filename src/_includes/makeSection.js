@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 module.exports = {
 
@@ -24,6 +25,42 @@ module.exports = {
                 break;
             case 'placeholder':
                 html = ``;
+                break;
+
+            case "embeddedsvg":
+                html = `<section id="${section.id}" class="section">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col center-block text-center">
+                                        <h1>${section.title}</h1>
+                                        <img src="${section.content.image}">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                `;
+                break;
+
+
+            case "inlinesvg": 
+
+                // open the svg file and put it inline into the html
+                let svg = fs.readFileSync(path.resolve(__dirname, `../../build/${section.content.image}`));
+
+                console.log(svg);
+
+                html = `<section id="${section.id}" class="section">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col center-block text-center">
+                                        <h1>${section.title}</h1>
+                                        <!--<img src="${section.content.image}">-->
+                                        ${svg}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                `;
                 break;
             case 'banner':
 
