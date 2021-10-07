@@ -12,7 +12,7 @@ module.exports = async function() {
   let site = JSON.parse(rawData);
 
   //let url = `https://professional.ie/api/getCoursesForKeywordsFull.php?keywords[]=${site.searchKeywords.join("&keywords[]=")}`;
-  let url = `http://pt.tld/api/getCoursesForKeywordsFull.php?keywords[]=${site.searchKeywords.join("&keywords[]=")}`;
+  let url = `http://professional.ie/api/getCoursesForKeywordsFull.php?keywords[]=${site.searchKeywords.join("&keywords[]=")}`;
 
   console.log(url);
 
@@ -26,13 +26,14 @@ module.exports = async function() {
                            .filter((course, index, courses) => courses.findIndex(c=>c.id==course.id) == index);
 
   distinctMicrositeKeywordList = json.flatMap(keyword=> keyword.microsite_keywords)
-                          .filter((mskeyword, index, list) => list.indexOf(mskeyword) == index);
+                          .filter((mskeyword, index, list) => list.indexOf(mskeyword) == index)
+                          .filter((mskeyword)=>mskeyword != "");
 
 
 
 
   
-  url = `http://pt.tld/api/getLandingPageTextForKeywords.php?keywords[]=${distinctMicrositeKeywordList.join("&keywords[]=")}`;
+  url = `http://professional.ie/api/getLandingPageTextForKeywords.php?keywords[]=${distinctMicrositeKeywordList.join("&keywords[]=")}`;
 
   console.log(url);
 
