@@ -2,6 +2,8 @@
 layout: general_layout
 title: Courses
 tags: [main]
+page:
+    type: course
 ---
 
 <hr class="my-2">

@@ -1,7 +1,9 @@
 {
-    "searchKeywords": ["Java", "Spring"],
+    "searchKeywords": ["Java"],
+    "searchLocations": ["Dublin", "Cork", "Limerick", "Ireland"],
+    "homepageTitle": "Training Courses - Dublin Cork Limerick Ireland", 
     "organisation": {
-        "name": "JavaTraining.ie"
+        "name": "AngularTraining.ie"
     },
     "url": "javatraining.ie",
     "logo": "/img/javalogo.png",
