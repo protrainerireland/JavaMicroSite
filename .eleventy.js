@@ -49,7 +49,7 @@ module.exports = function(config) {
             console.log(topic);
 
             let courses = topic.map(course=>{
-                return `<div><a href="/saved_searches/${course.location}/${slugify(course.keyword)}/${slugify(course.title)}.html">${course.title}</a></div>`;
+                return `<div><a href="/saved_searches/${slugify(course.location)}/${slugify(course.keyword)}/${slugify(course.title)}.html">${course.title}</a></div>`;
             });
             let card = `<div class="card">
                             <div class="card-header" id="headingOne">
