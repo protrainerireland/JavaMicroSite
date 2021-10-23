@@ -4,20 +4,12 @@
   "@type": "EducationalOrganization",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Palo Alto",
-    "addressRegion": "CA",
-    "postalCode": "94301",
-    "streetAddress": "50 Embarcadero Rd"
+    "addressLocality": "{{site.addressDublin.town}}, {{site.addressDublin.county}}",
+    "addressRegion": "{{site.addressDublin.country}}",
+    "postalCode": "{{site.addressDublin.postcode}}",
+    "streetAddress": "{{site.addressDublin.line1}}, {{site.addressDublin.line2}}"
   },
   "alumni": [
-    {
-      "@type": "Person",
-      "name": "John Doe"
-    },
-    {
-      "@type": "Person",
-      "name": "Sarah Glames"
-    }
   ],
   "name": "{{ site.organisation.name }}"
 }

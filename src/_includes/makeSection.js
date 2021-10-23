@@ -1,8 +1,37 @@
 const fs = require('fs');
 const path = require('path');
+const { stringify } = require('querystring');
 
 module.exports = {
 
+    slugify: function (str, replaceFullStops) {
+
+        // the 11ty slug filter doesn't remove full stops
+        // bootstrap doesn't like ids that have full stops so the option to replace them or not was added
+        // specifically full stops in the accordion ids was stopping them from working.
+
+        str = str.replace(/^\s+|\s+$/g, ''); // trim
+        str = str.toLowerCase();
+    
+        // remove accents, swap ñ for n, etc
+        var from = "àáäâèéëêìíïîòóöôùúüûñç·/_,:;";
+        var to   = "aaaaeeeeiiiioooouuuunc------";
+        for (var i = 0, l = from.length ; i<l ; i++) {
+            str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+        }
+    
+        if (replaceFullStops) {
+            str = str.replace(/[^a-z0-9 -]/g, '');
+        } else {
+            str = str.replace(/[^a-z0-9 -.]/g, ''); // remove invalid chars
+        }
+
+        str = str.replace(/\s+/g, '-') // collapse whitespace and replace by -
+            .replace(/-+/g, '-'); // collapse dashes
+    
+        //console.log(`slugged:${str}`);
+        return str;
+    },
 
     makeSection: function(section) {
 
