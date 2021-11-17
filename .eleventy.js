@@ -27,7 +27,7 @@ module.exports = function(config) {
 
     config.addFilter("slugify", slugify);
     
-    config.addFilter("asAccordion", asAccordion);
+    
     
     config.addFilter("asAccordion", function(searches) {
 
