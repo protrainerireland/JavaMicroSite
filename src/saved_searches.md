@@ -6,6 +6,6 @@ page:
     title: Search For Angular Training, Dublin, Cork, Limerick, Ireland
     type: other
 ---
-# SavedSearches
+# SavedSearches 
 
 {{ coursesapifull.savedSearches | asAccordion | safe }}
