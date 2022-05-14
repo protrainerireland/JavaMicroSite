@@ -29,6 +29,18 @@ module.exports = async function() {
                           .filter((mskeyword, index, list) => list.indexOf(mskeyword) == index)
                           .filter((mskeyword)=>mskeyword != "");
 
+  distinctMicrositeKeywordList = distinctMicrositeKeywordList.reduce((result, item) => {
+      // do a case-insensitive compare to 
+      // see if item is alreay in the result array
+      if (result.findIndex(resultItem => {
+          return resultItem.toLowerCase() == item.toLowerCase();
+      }) == -1) {
+          result.push(item);
+      }
+      return result;
+  }, []);
+
+
 
   console.log(distinctMicrositeKeywordList);
 
