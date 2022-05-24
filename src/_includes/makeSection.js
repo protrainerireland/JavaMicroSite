@@ -338,7 +338,7 @@ module.exports = {
                 let quotes = section.content.quotes.map((quote, index) => `<div class="col-md-5 testimonials" data-aos="fade-left" data-aos-delay="${ site.animation.delay * (index + 1) }" ${animationOffset}>
                     <p class="feedback">"${quote.text}"</p>
                     <img src="${quote.image}"  alt="">
-                    <p class="user-details"><b>${quote.name}</b></p>
+                    <p class="user-details"><b>${quote.name}</b><br>${ quote.jobtitle }</p>
                     </div>`).join("");
 
                 html = `<section id="${ section.id }" class="section">
