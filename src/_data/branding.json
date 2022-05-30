@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
     "primary_color": "#A8D0DB", 
     "secondary_color": "#3074B9",
-=======
-    "primary_color": "#4183C4", 
-    "secondary_color": "#DB2828",
->>>>>>> e2d70f0461ac9893559573d68bcc2a4b6a802196
     "foreground_color": "#000000", 
     "secondary_foreground_color": "#CA3132",
     "neutral": "#FFFAEE",
