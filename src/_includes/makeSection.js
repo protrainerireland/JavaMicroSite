@@ -53,7 +53,7 @@ module.exports = {
             //console.log(topic);
 
             let courses = topic.map(course=>{
-                return `<div><a href="/saved_searches/${course.location}/${slugify(course.keyword)}/${slugify(course.title)}.html">${course.title}</a></div>`;
+                return `<div><a href="/saved_searches/${slugify(course.location)}/${slugify(course.keyword)}/${slugify(course.title)}.html">${course.title}</a></div>`;
             });
             let card = `<div class="card">
                             <div class="card-header" id="headingOne">
@@ -181,7 +181,9 @@ module.exports = {
                         data-aos-anchor="#${section.id}"
                         >
                         <p class="about-title">${ section.content.title }</p>
-                        <p>${ defaultTemplate }</p>
+                        <p>${ section.content.text1 }</p>
+                        <p>${ section.content.text2 }</p>
+                        ${list}
                         </div>`;
                     if (section.image) {
                         html += `<div class="col-md-6"
@@ -253,10 +255,13 @@ module.exports = {
                 </section>`;
                 break;
             case "animatedtwocolumns":
-                //let list = "<ul>";
-                //section.content.list.map(item=>list += `<li>${item}</li>`);
-                //list += "</ul>";
-                list = `<ul>${section.content.list.map(item=>`<li>${item}</li>`).join("")}</ul>`;
+                try {
+                    list = `<ul>${section.content.list.map(item=>`<li>${item}</li>`).join("")}</ul>`;
+                } catch(error) {
+                    list = `<ul></ul>`;
+                    console.log(`***** metadata error section.content.list is missing - animatedtwocolumns *****`);
+                    
+                }
 
                 html = `<section id="${section.id}" class="section">
                     <div class="container">
@@ -264,6 +269,7 @@ module.exports = {
                     <div class="row">
                         <div class="col-md-6 about" data-aos="fade-left" ${ animationDelay } ${animationOffset}>
                         <p class="about-title">${ section.content.title }</p>
+                        
                         ${list}
                         </div>
                         <div class="col-md-6" data-aos="fade-right" ${ animationDelay } ${animationOffset}>
@@ -311,13 +317,15 @@ module.exports = {
 
 
                 break;
-    
+                
 
             case "listwithimage":
-                //let list = "<ul>";
-                //section.content.list.map(item=>list += `<li>${item}</li>`);
-                //list += "</ul>";
+                try {
                 list = `<ul>${section.content.list.map(item=>`<li>${item}</li>`).join("")}</ul>`;
+                } catch(error) {
+                    list = `<ul></ul>`;
+                    console.log(`***** metadata error section.content.list is missing - listwithimage *****`);
+                }
 
                 html = `<section id="${section.id}" class="section">
                     <div class="container">
@@ -350,6 +358,43 @@ module.exports = {
                             </div>
                         </section>`;
                 break;
+
+                case "summary":
+
+                    try {
+                        list = `<ul>${section.content.list.map(item=>`<li>${item}</li>`).join("")}</ul>`;
+                    } catch(error) {
+                        list = `<ul></ul>`;
+                        console.log(`***** metadata error section.content.list is missing - summary *****`);
+                    }
+                    
+                    html = `<section id="${section.id}" class="section">
+                        <div class="container">
+                        <h3 class="title text-center">${ section.title }</h3>
+                        <div class="row ${section.imagePosition=="left" ? "flex-row-reverse" :""}">
+                            <div class="${section.image ? 'col-md-6' : 'col-md-12'} about"
+                            data-aos="fade-left" ${ animationDelay } ${animationOffset}
+                            data-aos-anchor="#${section.id}"
+                            >
+                            <p class="about-title">${ section.content.title }</p>
+                            <p>${ section.content.text1 }</p>
+                            <p>${ section.content.text2 }</p>
+                            ${list}
+                            
+                            </div>`;
+                        if (section.image) {
+                            html += `<div class="col-md-6"
+                                    data-aos="fade-right" ${ animationDelay }  ${animationOffset}
+                                    data-aos-anchor="#${section.id}"
+                            >
+                                        <img src="${ section.image }" class="img-fluid" alt="">
+                                    </div>`;
+                        }    
+        
+                    html += `</div>
+                        </div>
+                    </section>`;
+                    break;
 
             case 'pricing':
 
