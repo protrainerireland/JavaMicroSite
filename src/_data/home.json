@@ -49,7 +49,7 @@
             "link": "/#text", 
             "text": "Why Attend?", 
             "title": "Why Attend?", 
-            "type": "keywordtext",
+            "type": "summary",
             "image": "", 
             "imagePosition": "right",
             "content":{
