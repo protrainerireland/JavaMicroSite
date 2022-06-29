@@ -62,6 +62,16 @@ module.exports = async function() {
     }
   });
 
+  //
+    let index = msKeywordData.findIndex(keyword => keyword.keyword == site.searchKeywords);
+
+    let primaryKeyword = msKeywordData[index];
+
+    msKeywordData.splice(index, 1);
+
+    msKeywordData.unshift(primaryKeyword);
+
+
 
     //let savedSearches = site.searchLocations.flatMap(location=> msKeywordData.map(keyword => {
     let savedSearches = msKeywordData.flatMap(keyword=> {

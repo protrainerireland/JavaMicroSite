@@ -36,6 +36,12 @@ module.exports = {
     slugify,
     asAccordion: function (data) {
 
+        console.log("*********");
+        console.log("asAccordion");
+
+        console.log(data[0].keyword);
+        console.log(data[1].keyword);
+        
         let topics = data.reduce((result, current, index) => {
 
             let keyword = slugify(current.keyword);
@@ -46,6 +52,10 @@ module.exports = {
             }
             return result;
         }, {});
+
+        //console.log("******************************");
+        //console.log(topics);
+        //console.log("******************************");
 
         let cards = Object.keys(topics).map((topicName, index) => {
             //console.log(topicName);
@@ -71,14 +81,19 @@ module.exports = {
                             </div>
                         </div>`;
             return card;
+
+            
         });
-        let accordion = `<div class="accordion" id="savedSearchAccordion">
-                    ${cards.join("")}
-                </div>`;
+        let accordion = `<div class="accordion" id="savedSearchAccordion">    
+                ${cards.join("")}
+        </div>`;
+
+        
     
         html = `<section id="savedsearches" class="section">
                     <div class="container">
                         <div class="col">
+                        
                         ${accordion}
                         </div>
                     </div>
