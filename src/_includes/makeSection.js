@@ -242,7 +242,7 @@ module.exports = {
                     </div>
                 </section>`;
                 break;
-
+//test
             case "welcome":
                 
                 html = `<section id="${section.id}" class="section">
