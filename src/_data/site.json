@@ -31,7 +31,6 @@
         "country": "Ireland",
         "postcode": "V94 CP26"
     },
-    
     "email": "info@professional.ie", 
     "phone": "+353 1 6627700",
     "phoneDublin": "+353 21 4319010",
@@ -50,10 +49,7 @@
         "link": "https://professional.ie/consulting_ireland/web%20development%20consultancy%20ireland.htm"
     }, 
     "social": {
-        "facebook": "#", 
-        "instagram": "#", 
-        "twitter": "#", 
-        "linkedin": "#"
+        "linkedin": "https://www.linkedin.com/company/professional-training-solutions-limited"
     }, 
     "animation": {
         "delay": 300, 

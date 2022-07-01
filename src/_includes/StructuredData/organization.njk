@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Professional Training Solutions",
+    "url": "{{ site.url }}",
+    "sameAs": "{{ site.social.linkedin }}",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{site.addressDublin.line1}}, {{site.addressDublin.line2}}",
+        "addressLocality": "{{site.addressDublin.town}}, {{site.addressDublin.county}}",
+        "addressRegion": "{{site.addressDublin.country}}",
+        "postalCode": "{{site.addressDublin.postcode}}",
+        "addressCountry": {
+            "@type": "Country",
+            "name": Ireland
+        }
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "{{ site.phone }}",
+            "email": "{{ site.email }}",
+            "contactType": "sales"
+        }
+    }
+}
+</script>
