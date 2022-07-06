@@ -54,34 +54,35 @@ module.exports = async function() {
     type: "json"
   });
 
+
   let msKeywordData = json.map(keyword=> {
    
-
-
-    return {
+    //console.log(keyword);
+      return {
       keyword: keyword.keyword, 
       paragraphs: keyword.paragraphs, 
       courses: distinctCourseList.filter(course=>course.searchWords.includes(keyword.keyword))
     }
+
+ 
   });
 
   
   
-  let index = msKeywordData.findIndex(keyword => keyword.keyword == site.searchKeywords);
+  // change the order of the keywords to put the primary keyword first
+  let index = msKeywordData.findIndex(keyword => keyword.keyword == site.searchKeywords[0]);
 
-  let primaryKeyword = msKeywordData[index];
+  // bugfix, if keyword not found don't do anything 
+  if (index != -1) {
 
-  msKeywordData.splice(index, 1);
-
-  msKeywordData.unshift(primaryKeyword);
-  
-  
-    
-  
-
+    let primaryKeyword = msKeywordData[index];
+    msKeywordData.splice(index, 1);
+    msKeywordData.unshift(primaryKeyword);
+  }
 
     //let savedSearches = site.searchLocations.flatMap(location=> msKeywordData.map(keyword => {
-    let savedSearches = msKeywordData.flatMap(keyword=> {
+    let savedSearches = msKeywordData    
+        .flatMap(keyword=> {
       return site.searchLocations.map(location => {
 
         return {

@@ -20,12 +20,14 @@
             "link": "/#welcome", 
             "text": "Welcome", 
             "title": "Welcome", 
-            "type": "welcome",
+            "type": "keywordtext",
             "image": "/svg/Code Version Control.svg", 
             "imagePosition": "right",
             "content":{
                 "title": "A great programming language to learn...",
-                "text": "Java is fast, stable, and highly scalable, making it the most popular coding language in the world. The job market for Java developers is therefore robust and consistent, making it a great programming language to learn on one of our Java or Spring Framework training courses."
+                "text":[
+                    "Java is fast, stable, and highly scalable, making it the most popular coding language in the world. The job market for Java developers is therefore robust and consistent, making it a great programming language to learn on one of our Java or Spring Framework training courses."
+                ] 
             }
         },
         {
@@ -33,14 +35,16 @@
             "link": "/#about", 
             "text": "About", 
             "title": "About", 
-            "type": "about",
+            "type": "keywordtext",
             "image": "/svg/Design collaboration.svg", 
             "imagePosition": "right",
             "content":{
                 "title": "Java is everywhere...",
-                "textFirst": "Java is everywhere – desktop, mobile and card.  Java is an Object-Oriented Programming Language which is easy to learn with our focused courses.  It has a Rich API and powerful development tools e.g., Eclipse, Netbeans etc.  Coding in IDE is a pleasure, especially if you have coded in DOS Editor or Notepad.",
-                "textSecond": "Open-source libraries ensure that Java should be used everywhere. Apache, Google, and other organization have contributed a lot of great libraries, which makes Java development easy, faster, and cost-effective.",
-                "textThird": "Frameworks like Spring, Struts, Maven ensure that Java development follows best practices of software craftsmanship, promotes the use of design patterns and assists Java developers in getting their job done."
+                "text":[
+                    "Java is everywhere – desktop, mobile and card.  Java is an Object-Oriented Programming Language which is easy to learn with our focused courses.  It has a Rich API and powerful development tools e.g., Eclipse, Netbeans etc.  Coding in IDE is a pleasure, especially if you have coded in DOS Editor or Notepad.",
+                    "Open-source libraries ensure that Java should be used everywhere. Apache, Google, and other organization have contributed a lot of great libraries, which makes Java development easy, faster, and cost-effective.",
+                    "Frameworks like Spring, Struts, Maven ensure that Java development follows best practices of software craftsmanship, promotes the use of design patterns and assists Java developers in getting their job done."
+                ]
             }
         },
         
