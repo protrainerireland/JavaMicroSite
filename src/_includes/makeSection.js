@@ -153,12 +153,10 @@ module.exports = {
 
                 } catch(error) {
                     text = `<ul></ul>`;
-                    console.log(`***** metadata error section.content.list is missing - keywordtext *****`);  
+                    console.log(`***** metadata error section.content.text is missing - keywordtext *****`);  
 
                 }
 
-                
-                
                 html = `<section id="${section.id}" class="section">
                     <div class="container">
                     <h3 class="title text-center">${ section.title }</h3>
@@ -205,7 +203,7 @@ module.exports = {
 
                 } catch(error) {
                     text = `<ul></ul>`;
-                    console.log(`***** metadata error section.content.list is missing - keywordtext *****`);  
+                    console.log(`***** metadata error section.content.text is missing - keywordtext *****`);  
 
                 }
 

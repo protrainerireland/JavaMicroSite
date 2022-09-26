@@ -45,9 +45,9 @@
                     "Open-source libraries ensure that Java should be used everywhere. Apache, Google, and other organization have contributed a lot of great libraries, which makes Java development easy, faster, and cost-effective.",
                     "Frameworks like Spring, Struts, Maven ensure that Java development follows best practices of software craftsmanship, promotes the use of design patterns and assists Java developers in getting their job done."
                 ]
+                
             }
         },
-        
         {
             "id": "keywordtext",
             "link": "/#text", 
