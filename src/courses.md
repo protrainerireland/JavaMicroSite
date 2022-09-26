@@ -6,6 +6,7 @@ page:
     type: course
 ---
 
+
 <hr class="my-2">
 <h1>{{ site.searchKeywords[0] }} Courses</h1>
 

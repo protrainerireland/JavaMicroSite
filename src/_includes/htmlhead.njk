@@ -1,3 +1,4 @@
+  <!-- master header -->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,13 @@
     {% elif page.type == "landing" %}
     <title>{{ search.title }}</title>
     {% elif page.type == "course" %}
-    <title>{{ course.name }}</title>
+    <title>{{ course.name }} Training</title>
+    {% elif page.type == "schedule" %}
+    <title>Scheduled Training Courses {{ site.homepageTitle }}</title>
     {% else %}
     <title>{{ page.title }}</title>
     {% endif %}
-    
+     
     
     
     <meta name="description" content="">

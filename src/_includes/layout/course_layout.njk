@@ -1,21 +1,13 @@
 ---
 layout: general_layout
 ---
-
-
-
   <hr class="my-2">
   <h1>{{ course.name }}</h1>
   <hr class="my-3">
   
-  <strong>Course Description</strong>
+  <h2>Course Description</h2>
   <p>{{ course.descrip }}</p>
   <hr class="my-2">
-
-  
-  <!-- debugging tip - pipe an object through the json filter to see what it is
-  {{ course | json}} -->
-
   
   <div class="ui course-paragraphs">
   {% for paragraph in course.paragraphs %}
@@ -25,9 +17,30 @@ layout: general_layout
 </div>
 
 <div>
+
+{% if course.schedule != null and course.schedule.length > 0 %}
+<hr class="my-2">
+<h2>Schedule</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th><th>Date</th><th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+{% for instance in course.schedule %}
+    {{ instance | formatScheduleInstance("table", course) | safe }}
+{% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+
 <hr class="my-2">
 {% for searchword in course.searchWords.split(',') %}
-<button type="button" class="btn btn-light" href="courses/searchWords/{{ searchword }}">{{ searchword }}</button>
+<button class="btn btn-light" href="/courses/searchWords/{{ searchword }}">{{ searchword }}</button>
 {% endfor %}
 <hr class="my-2">
 </div>
+
+{% include "StructuredData/instances.njk" %}

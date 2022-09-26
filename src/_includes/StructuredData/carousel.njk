@@ -1,0 +1,36 @@
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement":[
+        {% for course in coursesapifull.courses %}
+            {
+                "@type":"ListItem", 
+                "position": {{ loop.index }}, 
+                "item": {
+                    "@type": "Course", 
+                    "url": "{{ site.url }}/courses/{{ course.name | slug }}/", 
+                    "name": "{{ course.name }}", 
+                    "description":"{{ course.descrip | jsonsafe }}", 
+                    "provider":{
+                        "@context":"http://schema.org", 
+                        "@type": "EducationalOrganization", 
+                        "name": "Professional Training", 
+                        "sameAs": "https://www.professional.ie", 
+                        "department":{
+                            "@context": "https://schema.org",
+                            "@type": "EducationalOrganization", 
+                            "name": "{{ site.organisation.department }}",
+                            "url": "{{ site.url }}"
+                        }
+                    }
+                }
+            }{%if loop.index < coursesapifull.courses.length %},{% endif %}
+
+        {% endfor %}
+
+    ]
+}
+</script>
+
+  
