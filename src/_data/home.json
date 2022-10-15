@@ -54,7 +54,7 @@
             "text": "Why Attend?", 
             "title": "Why Attend?", 
             "type": "summary",
-            "image": "img/coding.jpg", 
+            "image": "/svg/undraw_software_engineer_lvl5.svg", 
             "imagePosition": "right",
             "imageWidth": 300, 
             "content":{
