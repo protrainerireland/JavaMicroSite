@@ -9,17 +9,15 @@ page:
 
 <hr class="my-2">
 <h1>{{ site.searchKeywords | join }} Course Schedule</h1>
-
+<hr class="my-2">
 <table class="table">
-<thead>
-    <tr>
-       <th>Name</th><th>Description</th><th>Location</th>
-    </tr> 
-</thead>
+
 <tbody>
+
 </tbody>
-</tbody>
+
 </table>
+
 
 
 
