@@ -41,4 +41,28 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72.png">
     <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57.png">
+
+    <script>
+        function displayIf(condition, ifTrue, ifFalse) {
+
+            document.write(condition ? ifTrue : ifFalse);
+        }
+
+        function displayIfDateInFuture(strDate, ifTrue, ifFalse) {
+
+            // this function takes in a date in string format yyyy-mm-dd and evaluates if it is 
+            // after today.  It displays one or the other elements that were passed
+            let pieces = strDate.split("-");
+            let year = parseInt(pieces[0]);
+            let month = parseInt(pieces[1]);
+            let day = parseInt(pieces[2]);
+            console.log("" + day + "/" + month + "/" + year);
+            let courseDate = new Date(year, month-1, day);
+
+            let enabled = courseDate > new Date();
+
+            document.write(enabled ? ifTrue : ifFalse);
+
+        }
+    </script>
   </head>

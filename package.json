@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "eleventy",
-    "start:dev": "eleventy --watch --serve"
+    "start:dev": "eleventy --watch --serve", 
+    "start:quiet": "eleventy --watch --serve --quiet"
+
   },
   "repository": {
     "type": "git",

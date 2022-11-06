@@ -112,10 +112,10 @@ module.exports = function(config) {
         return `${item}-${a}-${b}-like`;
     });
 
-    config.addFilter("formatScheduleInstance", function(instance, formatType="metadata",course=null ) {
-
-        let filename = slugify(course.name);
-        
+    config.addFilter("formatScheduleInstance", function(instance, formatType="metadata",courseItem=null) {
+  
+        let filename = slugify(courseItem.name);
+      
        switch(formatType) {
             case "table":
                 return `<tr>
@@ -123,7 +123,13 @@ module.exports = function(config) {
                     <td>${instance.date}</td>
                     <td>${instance.location}</td>
                     <td>
-                        <a class="btn btn-primary" href="https://www.professional.ie/course_schedule/something.html?id=${instance.id}">Book</a>
+                        <script>
+                        {
+                        
+                            displayIfDateInFuture("${instance.date}", '<a class="btn btn-primary" href="https://www.professional.ie/course_schedule/${filename}.html?id=${instance.id}">Book</a>','<span>Completed</span>');
+
+                        }
+                        </script>
                     </td>
                     </tr>`;
                 break;
@@ -131,21 +137,21 @@ module.exports = function(config) {
                 let metadata = {
                     "@context":"http://schema.org", 
                     "@type": "EducationEvent", 
-                    name: `${ course.name }`, 
+                    name: `${ courseItem.name }`, 
                     image: `${site.url}${site.logo}`, 
-                    description: `${makeSafeForJson(course.descrip)}`, 
-                    ...getInstanceDateInfo(instance.date, course.durationDays), 
+                    description: `${makeSafeForJson(courseItem.descrip)}`, 
+                    ...getInstanceDateInfo(instance.date, courseItem.durationDays), 
                     eventStatus: "https://schema.org/EventScheduled", 
                     eventAttendanceMode: `https://schema.org/${instance.location == 'Online' ? "OnlineEventAttendanceMode" : "OfflineEventAttendanceMode"}`,
                     offers: {
                         "@type": "Offer", 
                         "url":`https://professional.ie/course_schedule/${filename}.html?id=${instance.id}`, 
                         "priceCurrency": "EUR", 
-                        "price": `${course.cost}`, 
+                        "price": `${courseItem.cost}`, 
                         "availability": "https://schema.org/InStock",
                         "validFrom": `${new Date().getFullYear()}-01-01T12:00`
                     }, 
-                    ...getLocationInfo(instance, course), 
+                    ...getLocationInfo(instance, courseItem), 
                     "organizer": {
                         "@type": "Organization", 
                         "name": "Professional Training", 

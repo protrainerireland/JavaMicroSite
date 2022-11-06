@@ -221,6 +221,9 @@ body {
     color: var(--foreground_color);
 }
 
+.footer a {
+    color: black;
+}
 .footer-img{
     width: 100%;
 }

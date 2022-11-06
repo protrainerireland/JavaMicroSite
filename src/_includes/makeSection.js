@@ -71,9 +71,10 @@ module.exports = {
             return card;
             
         });
-        let accordion = `<div class="accordion" id="savedSearchAccordion">    
+        let accordion = `<details class="accordion" id="savedSearchAccordion"> 
+                <summary>Saved Searches</summary>   
                 ${cards.join("")}
-        </div>`;
+        </details>`;
 
         html = `<section id="savedsearches" class="section">
                     <div class="container">
