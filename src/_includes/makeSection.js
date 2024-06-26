@@ -87,6 +87,36 @@ module.exports = {
         return html;
 
     }, 
+    keywordInfo: function (keyword, courseList) {
+        
+        html=`<section>
+        <table class="table">
+        <thead>
+            <tr>
+            <th>Name</th><th>Description</th>
+            </tr> 
+        </thead>
+        <tbody>`;
+        
+
+        courses = courseList.filter(course=>course.searchWords.indexOf(`${keyword},`))
+            .map(course => `<tr><td>${ course.name }</td><td>${ course.descrip }</td></tr>`).join("");
+
+/*
+            .forEach(course => `<tr>
+                    <td><a href="/courses/{{ course.name | slug }}/">{{ course.name }}</a></td>
+                    <td>{{ course.descrip}}</td>
+                </tr>`)
+            .join("");
+  */
+        html += courses;
+
+        html += `</tbody></table></section>`;
+
+
+        
+        return html;
+    },
     makeSection: function(section) {
 
         let rawData = fs.readFileSync(`${__dirname}/../_data/site.json`);
