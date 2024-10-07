@@ -1,12 +1,12 @@
 {
-    "searchKeywords": ["Azure"],
+    "searchKeywords": ["Python"],
     "searchLocations": ["Dublin", "Cork", "Limerick", "Ireland"],
     "homepageTitle": "Training Courses - Dublin Cork Limerick Ireland", 
     "organisation": {
         "name": "Professional Training Solutions Ltd" , 
-        "department": "Azure Training"
+        "department": "Python Training"
     },
-    "url": "https://www.azuretraining.ie",
+    "url": "https://www.pythontraining.ie",
     "logo": "",
     "description": "This  course is a focused, hands-on programme aimed at ensuring participants efficiently gain the skills they need to be more effective in their day to day roles.",
     "address": {
