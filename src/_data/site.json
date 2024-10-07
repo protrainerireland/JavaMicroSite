@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "searchKeywords": ["Java"],
     "searchLocations": ["Dublin", "Cork", "Limerick", "Ireland"],
     "homepageTitle": "Training Courses - Dublin Cork Limerick Ireland", 
@@ -9,17 +8,6 @@
     },
     "url": "javatraining.ie",
     "logo": "/img/javalogo.png",
-=======
-    "searchKeywords": ["Python"],
-    "searchLocations": ["Dublin", "Cork", "Limerick", "Ireland"],
-    "homepageTitle": "Training Courses - Dublin Cork Limerick Ireland", 
-    "organisation": {
-        "name": "Professional Training Solutions Ltd" , 
-        "department": "Python Training"
-    },
-    "url": "https://www.pythontraining.ie",
-    "logo": "",
->>>>>>> b8d37de406b605432caa5d328253d7a72e7c0fca
     "description": "This  course is a focused, hands-on programme aimed at ensuring participants efficiently gain the skills they need to be more effective in their day to day roles.",
     "address": {
         "line1": "Building 6500E", 
