@@ -9,11 +9,7 @@ page:
 
 
 <hr class="my-2">
-<<<<<<< HEAD
 <h1>{{ site.searchKeywords[0] }} Courses</h1>
-=======
-<h1>{% for keyword in site.searchKeywords %} {{ keyword }} {% endfor %} Training Courses</h1>
->>>>>>> 73ae52c3737501bc0189ad99266d2613d7cb51de
 
 <table class="table">
 <thead>
