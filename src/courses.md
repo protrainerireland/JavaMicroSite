@@ -1,36 +1,26 @@
 ---
-layout: general_layout
+layout: base_layout
 title: Courses
-description: Training Courses
+metaTitle: All Java Training Courses | Dublin Cork Limerick Ireland
+description: Every Java training course we run, with outlines and dates. Instructor-led courses in Dublin, Cork, Limerick and live online.
 tags: [main]
-page:
-    type: home
+pageType: courses
 ---
+<header class="page-head">
+<div class="wrap">
+<h1>{% for keyword in site.searchKeywords %}{{ keyword }} {% endfor %}training courses</h1>
+<p class="page-head__lead">Instructor-led courses in Dublin, Cork, Limerick and live online. Choose a course to see what it covers and when it runs.</p>
+</div>
+</header>
 
-
-<hr class="my-2">
-<h1>{{ site.searchKeywords[0] }} Courses</h1>
-
-<table class="table">
-<thead>
-    <tr>
-       <th>Name</th><th>Description</th>
-    </tr> 
-</thead>
-<tbody>
-</tbody>
-
+<div class="wrap page">
+<ul class="course-list">
 {% for course in coursesapifull.courses %}
-<tr>
-<td><a href="/courses/{{ course.name | slug }}/">{{ course.name }}</a></td>
-<td>{{ course.descrip}}</td>
-</tr>
+<li>
+<h2><a href="/courses/{{ course.name | slug | removeInvalidChars }}/">{{ course.name }}</a></h2>
+<p>{{ course.descrip | truncate: 220 }}</p>
+{% assign meta = course | courseMeta %}{% if meta != "" %}<p class="course-list__meta">{{ meta }}</p>{% endif %}
+</li>
 {% endfor %}
-
-</table>
-
-
-
-    
-
-
+</ul>
+</div>

@@ -1,13 +1,11 @@
 {
-    "primary_color": "#A8D0DB", 
-    "secondary_color": "#3074B9",
-    "foreground_color": "#000000", 
-    "secondary_foreground_color": "#CA3132",
-    "neutral": "#FFFAEE",
-
-    "gradient_start": "#F5D547",
-    "gradient_end": "#FC7A1E"
+    "primary_color": "#8A3B12",
+    "primary_strong_color": "#6B2C0C",
+    "secondary_color": "#F6F1EC",
+    "foreground_color": "#2A1F1A",
+    "secondary_foreground_color": "#5E514A",
+    "highlight_color": "#F28C28",
+    "accent_soft_color": "#F3E2D3",
+    "accent_deep_color": "#3A1D0E",
+    "warm_soft_color": "#FDEBD3"
 }
-
-
-

@@ -1,86 +1,74 @@
 {
-    "sections":[
+    "sections": [
         {
             "id": "top",
-            "link": "/#top", 
-            "text": "Home",  
+            "link": "/",
+            "text": "Home",
             "type": "placeholder"
-        }, 
+        },
         {
-            "id": "banner", 
-            "link": "no", 
-            "type": "banner", 
-            "title": "Java Training Courses Ireland", 
-            "subtitle": "Contact us for all your Java training requirements", 
-            "background": "img/ground@-min.png",
-            "image": "svg/onlineclass.svg"
-        }, 
-        {
-            "id": "welcome",
-            "link": "/#welcome", 
-            "text": "Welcome", 
-            "title": "Welcome", 
-            "type": "keywordtext",
-            "image": "/svg/Code Version Control.svg", 
-            "imagePosition": "right",
-            "content":{
-                "title": "A great programming language to learn...",
-                "text":[
-                    "Java is fast, stable, and highly scalable, making it the most popular coding language in the world. The job market for Java developers is therefore robust and consistent, making it a great programming language to learn on one of our Java or Spring Framework training courses."
-                ] 
+            "id": "banner",
+            "link": "no",
+            "type": "banner",
+            "title": "Java Training Courses Ireland",
+            "subtitle": "Practical, instructor-led Java training in Dublin and Cork, at your premises nationwide, and live online. Learn to write, test and maintain reliable Java applications, from the core language through to Spring and Hibernate.",
+            "illustration": {
+                "src": "/img/undraw-software-engineer.svg",
+                "width": 960,
+                "height": 616
             }
         },
         {
             "id": "about",
-            "link": "/#about", 
-            "text": "About", 
-            "title": "About", 
-            "type": "keywordtext",
-            "image": "/svg/Design collaboration.svg", 
-            "imagePosition": "right",
-            "content":{
-                "title": "Java is everywhere...",
-                "text":[
-                    "Java is everywhere – desktop, mobile and card.  Java is an Object-Oriented Programming Language which is easy to learn with our focused courses.  It has a Rich API and powerful development tools e.g., Eclipse, Netbeans etc.  Coding in IDE is a pleasure, especially if you have coded in DOS Editor or Notepad.",
-                    "Open-source libraries ensure that Java should be used everywhere. Apache, Google, and other organization have contributed a lot of great libraries, which makes Java development easy, faster, and cost-effective.",
-                    "Frameworks like Spring, Struts, Maven ensure that Java development follows best practices of software craftsmanship, promotes the use of design patterns and assists Java developers in getting their job done."
-                ]
-                
+            "link": "/#about",
+            "text": "About",
+            "title": "About our Java courses",
+            "type": "text",
+            "content": [
+                "Java is fast, stable and highly scalable, and it runs everywhere from enterprise systems and web services to Android apps. Its rich standard library, mature tools such as Eclipse and IntelliJ, and frameworks like Spring and Hibernate make it a dependable choice for large applications, so Java developers remain in steady demand.",
+                "Our instructor-led <a href=/courses/>courses</a> cover the language itself, object-oriented design, test-driven development and the frameworks used in industry. Every course is hands-on, with plenty of coding examples worked through with the trainer, so you can apply what you learn to your own projects straight away."
+            ],
+            "illustration": {
+                "src": "/img/undraw-visual-explanation.svg",
+                "width": 800,
+                "height": 551
             }
         },
         {
-            "id": "keywordtext",
-            "link": "/#text", 
-            "text": "Why Attend?", 
-            "title": "Why Attend?", 
-            "type": "summary",
-            "image": "/svg/undraw_software_engineer_lvl5.svg", 
-            "imagePosition": "right",
-            "imageWidth": 300, 
-            "content":{
-                "title": "Why attend one of our Java courses?"
-            }
-        },
-        {
-            "id": "testimonials", 
-            "link": "/#testimonials", 
-            "text": "Testimonials", 
-            "type": "quotes", 
+            "id": "testimonials",
+            "link": "/#testimonials",
+            "type": "quotes",
+            "title": "What our attendees say",
             "content": {
-                "title": "Testimonials", 
-                "quotes":[
+                "quotes": [
                     {
-                        "name": "Java Programmer",  
-                        "image": "/img/testimonials/man.png", 
-                        "text": "Our trainer used clear and concise examples. Particularly good demonstration on the use of the debugger and exception handling. He explained and demonstrated SQL injection attacks with examples and how to use prepared statements to defend against SQL injection attacks.  I really enjoyed the practical nature of the course."
-                    }, 
+                        "text": "Our trainer used clear and concise examples. Particularly good demonstration on the use of the debugger and exception handling. He explained and demonstrated SQL injection attacks with examples and how to use prepared statements to defend against SQL injection attacks.  I really enjoyed the practical nature of the course.",
+                        "name": "Java Programmer"
+                    },
                     {
-                        "name": "Learning & Development Manager",  
-                        "image": "/img/testimonials/woman.png", 
-                        "text": "Our participants noted that there were lots of coding examples used and the trainer explained examples well and paused where participants had issues.  We really got through a lot in a week.  We will definitely be booking further courses for our graduate programmes."
+                        "text": "Our participants noted that there were lots of coding examples used and the trainer explained examples well and paused where participants had issues.  We really got through a lot in a week.  We will definitely be booking further courses for our graduate programmes.",
+                        "name": "Learning & Development Manager"
+                    },
+                    {
+                        "text": "Placeholder testimonial. Replace this with a short quote from a real course attendee, describing what they learned and how they use it in their work.",
+                        "name": "Attendee name",
+                        "jobtitle": "Job title, Company"
                     }
                 ]
-            }
-        } 
-    ] 
+            },
+            "text": "Testimonials"
+        },
+        {
+            "id": "get-started",
+            "link": "no",
+            "type": "cta",
+            "title": "Find the right Java course for you",
+            "content": "From an introduction to Java programming for new developers to in-depth courses on Spring, Hibernate, Java EE and test-driven development. See what each course covers, then book a date in Dublin, Cork or live online.",
+            "actions": [
+                { "text": "Browse courses", "link": "/courses/" },
+                { "text": "See course dates", "link": "/schedule/" }
+            ],
+            "note": "Training a team? We can run any course at your premises or online, on dates that suit you. <a href=\"#contact\">Contact us</a>"
+        }
+    ]
 }

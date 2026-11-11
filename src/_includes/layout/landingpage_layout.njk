@@ -1,25 +1,33 @@
 ---
-layout: general_layout
+layout: base_layout
 ---
+{% set topic = search.keyword | replace(" Training", "") %}
+<header class="page-head">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="/courses/">Courses</a></p>
+    <h1>{{ search.title }}</h1>
+    <p class="page-head__lead">Instructor-led {{ topic }} courses {% if search.location == "Ireland" %}across Ireland and live online{% else %}in {{ search.location }} and live online{% endif %}. Choose a course to see what it covers and when it runs.</p>
+  </div>
+</header>
 
-<hr class="my-2">
-<h1>{{ search.title }}</h1>
-  <hr class="my-3">
-  
- 
-  <!-- debugging tip - pipe an object through the json filter to see what it is -->
-  <!--{{ keyword | json}} -->
-
-  
-  <div class="ui">
+<div class="wrap page">
+  {% if search.paragraphs and search.paragraphs.length > 0 %}
+  <div class="prose">
   {% for paragraph in search.paragraphs %}
     <p>{{ paragraph | convertLineBreaks | safe }}</p>
   {% endfor %}
   </div>
+  {% endif %}
 
+  <h2>{{ topic }} courses in {{ search.location }}</h2>
+  <ul class="course-list">
   {% for course in search.courses %}
-
-    <p> <a href="/courses/{{course.name | slug | removeInvalidChars}}">{{ course.name}}</a> </p>
-
+    <li>
+      <h3><a href="/courses/{{ course.name | slug | removeInvalidChars }}/">{{ course.name }}</a></h3>
+      <p>{{ course.descrip | truncate(220) }}</p>
+      {% set meta = course | courseMeta %}
+      {% if meta %}<p class="course-list__meta">{{ meta }}</p>{% endif %}
+    </li>
   {% endfor %}
-
+  </ul>
+</div>
